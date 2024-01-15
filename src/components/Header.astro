@@ -1,0 +1,143 @@
+---
+
+---
+
+<header
+  x-data="{navmobile: false, atTop: false}"
+  @scroll.window="atTop = ( window.scrollY > 150 ? false : true )"
+  :class="{ 'header__atTop' : !atTop }"
+>
+  <a href="/"><img src="icons/Ninternational.png" alt="Ninternational Logo"/></a>
+  <button
+    class="burger"
+    :class="navmobile && 'navmobile-open'"
+    @click="navmobile = ! navmobile"
+  >
+    <span class="burger__line line1"></span>
+    <span class="burger__line line2"></span>
+    <span class="burger__line line3"></span>
+  </button>
+  <nav class="nav__desktop">
+    <ul>
+      <li><a href="/projects">Projets</a></li>
+      <li><a href="#">Join</a></li>
+    </ul>
+  </nav>
+  <nav x-show="navmobile" x-transition.duration.400ms class="nav__mobile">
+    <ul>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="#">Join</a></li>
+    </ul>
+  </nav>
+</header>
+<style>
+  header {
+    width: calc(100% - 4rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+    z-index: 2;
+
+    transition: all 0.5s ease;
+  }
+
+  .header__atTop {
+    background-color: #000000bc;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+  }
+
+  img {
+    width: 3.5rem;
+  }
+
+  .burger {
+    display: none;
+    z-index: 3;
+  }
+
+  .burger__line {
+    width: 2rem;
+    height: 0.2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+  }
+
+  .navmobile-open .line1 .navmobile-open .line1::before,
+  .navmobile-open .line1::after {
+    transform: rotate(45deg);
+    transform-origin: 0 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navmobile-open .line2 .navmobile-open .line2::before,
+  .navmobile-open .line2::after {
+    transform: scaleY(0);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navmobile-open .line3 .navmobile-open .line3::before,
+  .navmobile-open .line3::after {
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav__mobile {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+  }
+
+  .nav__mobile ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: 630px) {
+    .nav__desktop {
+      display: none;
+    }
+
+    .nav__mobile {
+      display: flex;
+      background-color: #000000a5;
+    }
+
+    .burger {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+  }
+</style>
