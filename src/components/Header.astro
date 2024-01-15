@@ -20,13 +20,13 @@
   <nav class="nav__desktop">
     <ul>
       <li><a href="/projects">Projects</a></li>
-      <li><a href="#">Join</a></li>
+      <li><a href="https://discord.gg/vMRs6ENQJF">Join</a></li>
     </ul>
   </nav>
   <nav x-show="navmobile" x-transition.duration.400ms class="nav__mobile">
     <ul>
       <li><a href="/projects">Projects</a></li>
-      <li><a href="#">Join</a></li>
+      <li><a href="https://discord.gg/vMRs6ENQJF">Join</a></li>
     </ul>
   </nav>
 </header>
@@ -45,10 +45,6 @@
     z-index: 2;
 
     transition: all 0.5s ease;
-  }
-
-  .header__atTop {
-    background-color: #000000bc;
   }
 
   nav ul {
@@ -82,20 +78,23 @@
     transition: all 0.5s ease;
   }
 
-  .navmobile-open .line1 .navmobile-open .line1::before,
+  .navmobile-open .line1 
+  .navmobile-open .line1::before,
   .navmobile-open .line1::after {
     transform: rotate(45deg);
     transform-origin: 0 100%;
     transition: transform 0.4s ease-in-out;
   }
 
-  .navmobile-open .line2 .navmobile-open .line2::before,
+  .navmobile-open .line2 
+  .navmobile-open .line2::before,
   .navmobile-open .line2::after {
     transform: scaleY(0);
     transition: transform 0.4s ease-in-out;
   }
 
-  .navmobile-open .line3 .navmobile-open .line3::before,
+  .navmobile-open .line3
+  .navmobile-open .line3::before,
   .navmobile-open .line3::after {
     transform: rotate(-45deg);
     transform-origin: 0 100%;
@@ -139,5 +138,9 @@
       flex-direction: column;
       gap: 7px;
     }
+
+    .header__atTop {
+    background-color: #e9e9e9c0;
+  }
   }
 </style>

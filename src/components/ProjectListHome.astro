@@ -1,12 +1,19 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 
-let allProjects = await Astro.glob("../pages/projects/**/*.md");
+let allProjects = await Astro.glob("../pages/projects/**/*.mdx");
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 
-allProjects = allProjects.slice(-2).reverse();
+shuffleArray(allProjects);
+allProjects = allProjects.slice(0, 2);
 ---
 
-<h3>Recent Projects</h3>
+<h3>Highlighted Projects</h3>
 <ul>
     {allProjects.map(post => (
         <ProjectCard
