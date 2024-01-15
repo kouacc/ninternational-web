@@ -5,12 +5,8 @@ let allProjects = await Astro.glob("../pages/projects/**/*.mdx");
 ---
 
 
-<section>
-    <h2>Projects</h2>
-    <div>
 
-    </div>
-</section>
+<h2>Projects</h2>
 <ul>
     {allProjects.map(post => (
         <ProjectCard
