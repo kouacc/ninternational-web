@@ -16,6 +16,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<script src="https://kit.fontawesome.com/b0ac94d361.js" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<slot />
@@ -48,5 +49,9 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+
+	body {
+		margin: 0;
 	}
 </style>

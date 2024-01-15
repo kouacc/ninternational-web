@@ -1,0 +1,18 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+let allProjects = await Astro.glob("../pages/projects/**/*.md");
+
+allProjects = allProjects.slice(-2).reverse();
+---
+
+<ul>
+    {allProjects.map(post => (
+        <ProjectCard
+            projectName={post.frontmatter.projectName}
+            projectLink={post.url}
+            projectImg={post.frontmatter.projectImg}
+            projectLanguage={post.frontmatter.projectLanguage}
+            projectSystem={post.frontmatter.projectSystem}
+     />))}
+</ul>

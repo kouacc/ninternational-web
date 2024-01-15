@@ -1,0 +1,52 @@
+---
+
+const { projectName, projectLanguage, projectSystem, projectImg, projectLink} = Astro.props;
+---
+
+<li>
+    <a href={`${projectLink}`}><img src={`${projectImg}`} alt={`${projectName}`}></a>
+    <div class="text">
+        <div class="lang-system">
+            <img src={`icons/${projectSystem}.svg`} alt={`${projectSystem}`}>
+            <img src={`icons/flags/${projectLanguage}.svg`} alt={`${projectLanguage}`}>
+        </div>
+        <a href={`${projectLink}`}><p>{projectName}</p></a>
+    </div>
+</li>
+
+<style>
+    li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lang-system {
+        display: flex;
+        gap: 0.80rem;
+    }
+
+    .text p {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    li > a > img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+    }
+
+    .lang-system img {
+        width: 3.5rem;
+        height: auto;
+    }
+</style>
