@@ -1,0 +1,66 @@
+---
+import Layout from "./Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title="Jsp">
+    <Header></Header>
+    <main>
+        <div class="back-button">
+
+        </div>
+        <div class="project-title">
+            <h1>{frontmatter.projectName}</h1>
+            <img src={`/public/icons/platforms/${frontmatter.projectSystem}.svg`} alt={`${frontmatter.projectSystem}`}>
+            <img src={`/public/icons/flags/${frontmatter.projectLanguage}.svg`} alt={`${frontmatter.projectLanguage}`}>
+        </div>
+        <img src={`${frontmatter.projectImg}`} alt={`${frontmatter.projectName}`}>
+        <div class="project-author">
+            <section>
+                <h4>Translated by:</h4>
+                <p>{frontmatter.projectAuthor}</p>
+            </section>
+            <section>
+                <h4>Release Date:</h4>
+                <p>{frontmatter.projectDate.slice(0,10)}</p>
+            </section>
+        </div>
+        <slot />
+    </main>
+    <Footer></Footer>
+</Layout>
+
+<style>
+    main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: #000;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-title {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .project-title img {
+        width: 8%;
+        height:auto;
+    }
+
+    .project-author {
+        display: flex;
+        gap: 5rem;
+    }
+</style>
