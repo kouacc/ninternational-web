@@ -2,15 +2,11 @@
 import ProjectCard from "./ProjectCard.astro";
 
 let allProjects = await Astro.glob("../pages/projects/**/*.md");
+
+allProjects = allProjects.slice(-2).reverse();
 ---
 
-
-<section>
-    <h2>Projects</h2>
-    <div>
-
-    </div>
-</section>
+<h3>Recent Projects</h3>
 <ul>
     {allProjects.map(post => (
         <ProjectCard
@@ -24,8 +20,7 @@ let allProjects = await Astro.glob("../pages/projects/**/*.md");
 
 <style>
     ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3.5rem;
+        display: flex;
+        gap: 9.38rem;
     }
 </style>
