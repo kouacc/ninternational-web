@@ -28,6 +28,7 @@ const { projectName, projectLanguage, projectSystem, projectImg, projectLink} = 
     .lang-system {
         display: flex;
         gap: 0.80rem;
+        align-items: center;
     }
 
     .text p {
@@ -45,9 +46,14 @@ const { projectName, projectLanguage, projectSystem, projectImg, projectLink} = 
         border-radius: 0.5rem;
     }
 
-    .lang-system img {
-        width: 2.8rem;
-        height: auto;
+    .lang-system > img:first-child {
+        width: auto;
+        height: 1.6rem;
+    }
+
+    .lang-system > img:last-child {
+        width: auto;
+        height: 2rem;
     }
 
     #flag {
