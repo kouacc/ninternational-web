@@ -62,7 +62,7 @@ const { frontmatter } = Astro.props;
     main {
 		margin: auto;
 		padding: 1rem;
-		width: 800px;
+		width: 1000px;
 		max-width: calc(100% - 2rem);
 		color: #000;
 		font-size: 20px;
@@ -118,8 +118,10 @@ const { frontmatter } = Astro.props;
     }
 
     .project-controller ul {
-        display: grid;
-        grid-template-columns: repeat(4, 2fr);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
         gap: 0.8rem;
         list-style: none;
         margin: 0;
@@ -153,11 +155,22 @@ const { frontmatter } = Astro.props;
 
         .project-author {
             display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+        .project-controller {
+            width: 100%;
+            grid-area: 2 / 1 / 3 / 3;
         }
 
         .project-controller ul {
             display: flex;
-            flex-wrap: wrap; 
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
         }
 
         .project-controller img {

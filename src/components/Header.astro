@@ -1,5 +1,5 @@
 ---
-
+import Menu from "./Menu.astro"
 ---
 
 <header
@@ -7,28 +7,19 @@
   @scroll.window="atTop = ( window.scrollY > 150 ? false : true )"
   :class="{ 'header__atTop' : !atTop }"
 >
-  <a href="/"><img src="/favicon.svg" alt="Ninternational Logo"/></a>
-  <button
-    class="burger"
-    :class="navmobile && 'navmobile-open'"
-    @click="navmobile = ! navmobile"
-  >
-    <span class="burger__line line1"></span>
-    <span class="burger__line line2"></span>
-    <span class="burger__line line3"></span>
-  </button>
-  <nav class="nav__desktop">
-    <ul>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="https://discord.gg/vMRs6ENQJF">Join</a></li>
-    </ul>
-  </nav>
-  <nav x-show="navmobile" x-collapse.duration.400ms class="nav__mobile">
-    <ul>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="https://discord.gg/vMRs6ENQJF">Join</a></li>
-    </ul>
-  </nav>
+  <div>
+    <a href="/"><img src="/favicon.svg" alt="Ninternational Logo"/></a>
+    <button
+      class="burger"
+      :class="navmobile && 'navmobile-open'"
+      @click="navmobile = ! navmobile"
+    >
+      <span class="burger__line line1"></span>
+      <span class="burger__line line2"></span>
+      <span class="burger__line line3"></span>
+    </button>
+  </div>
+  <Menu></Menu>
 </header>
 <style>
   header {
@@ -40,6 +31,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 
     padding: 1rem 2rem;
     z-index: 2;
@@ -47,18 +39,11 @@
     transition: all 0.5s ease;
   }
 
-  nav ul {
+  header > div {
+    width: 100%;
     display: flex;
-    list-style: none;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav li a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
   }
 
   img {
@@ -116,14 +101,6 @@
   }
 
   @media screen and (max-width: 630px) {
-    .nav__desktop {
-      display: none;
-    }
-
-    .nav__mobile {
-      display: flex;
-      background-color: #000000a5;
-    }
 
     .burger {
       background-color: transparent;

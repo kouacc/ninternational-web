@@ -1,0 +1,62 @@
+---
+---
+
+<nav class="nav__desktop">
+    <ul>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="https://discord.gg/vMRs6ENQJF">Join</a></li>
+    </ul>
+  </nav>
+  <nav x-show="navmobile" x-collapse.duration.400ms class="nav__mobile">
+    <ul>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="https://discord.gg/vMRs6ENQJF">Join</a></li>
+    </ul>
+</nav>
+
+<style>
+    nav {
+        background-color: transparent;
+    }
+
+    nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+  }
+
+  .nav__mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav__mobile ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 1rem;
+  }
+    
+@media screen and (max-width: 630px) {
+    .nav__desktop {
+      display: none;
+    }
+
+    .nav__mobile {
+      display: flex;
+    }
+
+
+}
+</style>
+
