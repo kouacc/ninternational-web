@@ -113,7 +113,8 @@ const { frontmatter } = Astro.props;
     .project-controller {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        flex-wrap: wrap;
+        width: 50%;
     }
 
     .project-controller ul {
@@ -153,6 +154,14 @@ const { frontmatter } = Astro.props;
             display: grid;
         }
 
+        .project-controller {
+            width: 100%;
+        }
+
+        .project-controller ul {
+            flex-wrap: wrap;
+        }
+
         .project-controller img {
             width: auto;
             height: 2rem;
@@ -163,5 +172,7 @@ const { frontmatter } = Astro.props;
         .project-title {
             align-items: center;
         }
+
+        
     }
 </style>

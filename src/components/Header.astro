@@ -7,7 +7,7 @@
   @scroll.window="atTop = ( window.scrollY > 150 ? false : true )"
   :class="{ 'header__atTop' : !atTop }"
 >
-  <a href="/"><img src="/icons/Ninternational.png" alt="Ninternational Logo"/></a>
+  <a href="/"><img src="/favicon.svg" alt="Ninternational Logo"/></a>
   <button
     class="burger"
     :class="navmobile && 'navmobile-open'"
@@ -23,7 +23,7 @@
       <li><a href="https://discord.gg/vMRs6ENQJF">Join</a></li>
     </ul>
   </nav>
-  <nav x-show="navmobile" x-transition.duration.400ms class="nav__mobile">
+  <nav x-show="navmobile" x-collapse.duration.400ms class="nav__mobile">
     <ul>
       <li><a href="/projects">Projects</a></li>
       <li><a href="https://discord.gg/vMRs6ENQJF">Join</a></li>
@@ -102,14 +102,8 @@
   }
 
   .nav__mobile {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: 2;
+    display: flex;
+    flex-direction: column;
   }
 
   .nav__mobile ul {
