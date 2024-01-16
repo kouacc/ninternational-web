@@ -19,7 +19,7 @@ interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={`${frontmatter.projectName} - Ninternational`}>
+<Layout title={`${frontmatter.projectName} | ${frontmatter.projectLanguage} - Ninternational`} img={`${frontmatter.projectImg}`}>
     <Header></Header>
     <main>
         <a href="../../../projects" class="back-button">
