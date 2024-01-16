@@ -1,5 +1,6 @@
 ---
-import Menu from "./Menu.astro"
+import Nav from "./Nav.astro"
+import NavMenu from "./Navmenu.astro"
 ---
 
 <header
@@ -9,17 +10,19 @@ import Menu from "./Menu.astro"
 >
   <div>
     <a href="/"><img src="/favicon.svg" alt="Ninternational Logo"/></a>
-    <button
-      class="burger"
-      :class="navmobile && 'navmobile-open'"
-      @click="navmobile = ! navmobile"
-    >
-      <span class="burger__line line1"></span>
-      <span class="burger__line line2"></span>
-      <span class="burger__line line3"></span>
-    </button>
+    <Nav></Nav>
+  <button
+    class="burger"
+    :class="navmobile && 'navmobile-open'"
+    @click="navmobile = ! navmobile"
+  >
+    <span class="burger__line line1"></span>
+    <span class="burger__line line2"></span>
+    <span class="burger__line line3"></span>
+  </button>
   </div>
-  <Menu></Menu>
+  
+  <NavMenu class="navmobile"></NavMenu>
 </header>
 <style>
   header {
@@ -32,6 +35,7 @@ import Menu from "./Menu.astro"
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    
 
     padding: 1rem 2rem;
     z-index: 2;
@@ -114,6 +118,8 @@ import Menu from "./Menu.astro"
       .header__atTop {
     background-color: #e9e9e9c0;
     }
+
+    
     }
     
   }
