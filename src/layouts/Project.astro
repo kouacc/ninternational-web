@@ -117,7 +117,8 @@ const { frontmatter } = Astro.props;
     }
 
     .project-controller ul {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
         gap: 0.8rem;
         list-style: none;
         margin: 0;
@@ -125,8 +126,8 @@ const { frontmatter } = Astro.props;
     }
 
     .project-controller img {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 2.5rem;
     }
 
     @media (max-width: 630px) {
@@ -151,6 +152,11 @@ const { frontmatter } = Astro.props;
 
         .project-author {
             display: grid;
+        }
+
+        .project-controller ul {
+            display: flex;
+            flex-wrap: wrap; 
         }
 
         .project-controller img {
