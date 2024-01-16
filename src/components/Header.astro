@@ -6,7 +6,7 @@ import NavMenu from "./Navmenu.astro"
 <header
   x-data="{navmobile: false, atTop: false}"
   @scroll.window="atTop = ( window.scrollY > 150 ? false : true )"
-  :class="{ 'header__atTop' : !atTop }"
+  :class="{ 'header__atTop' : !atTop || navmobile}"
 >
   <div>
     <a href="/"><img src="/favicon.svg" alt="Ninternational Logo"/></a>
@@ -22,7 +22,7 @@ import NavMenu from "./Navmenu.astro"
   </button>
   </div>
   
-  <NavMenu class="navmobile"></NavMenu>
+  <NavMenu></NavMenu>
 </header>
 <style>
   header {
