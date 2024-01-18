@@ -12,6 +12,7 @@ interface Props {
         projectAuthor: string;
         projectDate: string;
         projectControllers: string[],
+        description: string,
     }
 
 }
@@ -19,7 +20,7 @@ interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={`${frontmatter.projectName} | ${frontmatter.projectLanguage} - Ninternational`} img={`${frontmatter.projectImg}`}>
+<Layout title={`${frontmatter.projectName} | ${frontmatter.projectLanguage} - Ninternational`} description={frontmatter.description} img={`${frontmatter.projectImg}`}>
     <Header></Header>
     <main>
         <div class="back-button">

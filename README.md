@@ -25,7 +25,7 @@ You can fork this repository and create a pull request to add a new fan-translat
 
 ## Properties
 
-The properties are on top of a ``.mdx``. It defines which layout to use, the name of the game, the fan-translation's author, the fan-translation's language, the platform on which the game is available, the compatible controllers, the release date and the banner.
+The properties are on top of a ``.mdx``. It defines which layout to use, the name of the game, the fan-translation's author, the fan-translation's language, the platform on which the game is available, the compatible controllers, the release date, the banner and a description.
 
 However, when defining the language, platform and controllers, please read the following instructions.
 
