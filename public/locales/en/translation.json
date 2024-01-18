@@ -1,0 +1,39 @@
+{
+    "hero": {
+        "subtitle": "An International fan-translation group for Nintendo games."
+    },
+
+    "home_projects": {
+        "title": "Highlighted Projects"
+    },
+
+    "about": {
+        "title":"What is Ninternational?",
+        "subtitle": "You are a fan-translator working on a Nintendo game? Ninternational is a fan-translation repository all about Nintendo games from all platforms. You can submit your translation on our website, to get more visibility and help from a dedicated community. If you're interested, join our Discord!"
+    },
+
+    "projects": {
+        "title": "Projects"
+    },
+
+    "header": {
+        "projects": "Projects",
+        "join": "Join"
+    },
+
+    "footer" : {
+        "disclaimer": "Ninternational is a fan-driven translation group for Nintendo games. It is not affiliated with Nintendo or any of its subsidiary."
+    },
+
+    "404": {
+        "subtitle": "Page not found",
+        "homepage": "Homepage"
+    },
+
+    "project_page": {
+        "translated": "Translated By:",
+        "date": "Release Date:",
+        "controllers": "Controllers",
+        "back": "Back"
+    }
+}

@@ -1,5 +1,6 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+import i18next, { t } from "i18next";
 
 let allProjects = await Astro.glob("../pages/projects/**/*.mdx");
 function shuffleArray(array) {
@@ -13,7 +14,7 @@ shuffleArray(allProjects);
 allProjects = allProjects.slice(0, 2);
 ---
 
-<h3>Highlighted Projects</h3>
+<h3>{t("home_projects.title")}</h3>
 <ul>
     {allProjects.map(post => (
         <ProjectCard

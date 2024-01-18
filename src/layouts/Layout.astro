@@ -3,13 +3,14 @@ interface Props {
 	title: string;
 	description: string;
 	img: string;
+	lang: string;
 }
 
-const { title, description, img } = Astro.props;
+const { title, description, img, lang } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />

@@ -1,12 +1,13 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+import i18next, { t } from "i18next";
 
 let allProjects = await Astro.glob("../pages/projects/**/*.mdx");
 ---
 
 
 
-<h2>Projects</h2>
+<h2>{t("projects.title")}</h2>
 <ul>
     {allProjects.map(post => (
         <ProjectCard

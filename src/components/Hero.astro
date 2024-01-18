@@ -1,10 +1,11 @@
 ---
 const { title } = Astro.props;
+import i18next, { t, } from "i18next";
 ---
 
 <div>
   <h1>Ninternational</h1>
-  <h2>An International fan-translation group for Nintendo games.</h2>
+  <h2>{t("hero.subtitle")}</h2>
 </div>
 
 <style>

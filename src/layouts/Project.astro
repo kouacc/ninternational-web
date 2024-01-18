@@ -3,6 +3,8 @@ import Layout from "./Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
+import i18next, { t } from "i18next";
+
 interface Props {
     frontmatter: {
         projectSystem: string;
@@ -20,13 +22,13 @@ interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={`${frontmatter.projectName} | ${frontmatter.projectLanguage} - Ninternational`} description={frontmatter.description} img={`${frontmatter.projectImg}`}>
+<Layout title={`${frontmatter.projectName} | ${frontmatter.projectLanguage} - Ninternational`} description={frontmatter.description} img={`${frontmatter.projectImg}`} lang={i18next.language}>
     <Header></Header>
     <main>
         <div class="back-button">
             <a href="../../../projects">
                 <i class="fa-solid fa-arrow-left"></i>
-                Back</a>
+                {t("project_page.back")}</a>
         </div>
         <div class="project-title">
             <h1>{frontmatter.projectName}</h1>
@@ -39,16 +41,16 @@ const { frontmatter } = Astro.props;
         <div class="project-author">
             <div>
                 <section>
-                    <h4>Translated by:</h4>
+                    <h4>{t("project_page.translated")}</h4>
                     <p>{frontmatter.projectAuthor}</p>
                 </section>
                 <section>
-                    <h4>Release Date:</h4>
+                    <h4>{t("project_page.date")}</h4>
                     <p>{frontmatter.projectDate.slice(0,10)}</p>
                 </section>
             </div>
             {frontmatter.projectControllers && <div class="project-controller">
-                <h4>Controllers:</h4>
+                <h4>{t("project_page.controllers")}</h4>
                 <ul>
                     {frontmatter.projectControllers.map((controller) => (
                         <li><img src={`/icons/controllers/${controller}.svg`} alt={`${controller}`}/></li>

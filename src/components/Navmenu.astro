@@ -1,10 +1,11 @@
 ---
+import i18next, { t } from "i18next";
 ---
 
   <nav x-show="navmobile" x-collapse.duration.400ms class="nav__mobile">
     <ul>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="https://discord.gg/vMRs6ENQJF">Join</a></li>
+      <li><a href="/projects">{t("header.projects")}</a></li>
+      <li><a href="https://discord.gg/vMRs6ENQJF">{t("header.join")}</a></li>
     </ul>
 </nav>
 
