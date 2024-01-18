@@ -1,8 +1,9 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 import i18next, { t } from "i18next";
+import { getCollection } from "astro:content"
 
-let allProjects = await Astro.glob("../pages/projects/**/*.mdx");
+const allProjects = await getCollection("projects");
 ---
 
 
@@ -11,11 +12,11 @@ let allProjects = await Astro.glob("../pages/projects/**/*.mdx");
 <ul>
     {allProjects.map(post => (
         <ProjectCard
-            projectName={post.frontmatter.projectName}
-            projectLink={post.url}
-            projectImg={post.frontmatter.projectImg}
-            projectLanguage={post.frontmatter.projectLanguage}
-            projectSystem={post.frontmatter.projectSystem}
+            projectName={post.data.projectName}
+            projectLink={`/projects/${post.slug}/`}
+            projectImg={post.data.projectImg}
+            projectLanguage={post.data.projectLanguage}
+            projectSystem={post.data.projectSystem}
      />))}
 </ul>
 

@@ -1,0 +1,21 @@
+---
+import { changeLanguage } from "i18next";
+import { getCollection } from "astro:content";
+import ProjectLayout from "../../../layouts/Project.astro";
+
+changeLanguage("de");
+
+export async function getStaticPaths() {
+    const projectsEntries = await getCollection("projects");
+    return projectsEntries.map(entry => ({
+        params: { slug: entry.slug },
+        props: { entry },
+    }));
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<ProjectLayout frontmatter={entry}>
+    <Content />
+</ProjectLayout>

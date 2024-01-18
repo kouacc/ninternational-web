@@ -1,12 +1,13 @@
 ---
 import LanguageSelect from "./LanguageSelect.astro"
 import i18next, { t } from "i18next";
+import { localizePath } from "astro-i18next";
 ---
 
 <nav class="nav__desktop">
     <ul>
       <LanguageSelect></LanguageSelect>
-      <li><a href="/projects">{t("header.projects")}</a></li>
+      <li><a href={localizePath("/projects")}>{t("header.projects")}</a></li>
       <li><a href="https://discord.gg/vMRs6ENQJF">{t("header.join")}</a></li>
     </ul>
 </nav>

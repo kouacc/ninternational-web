@@ -4,29 +4,19 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 import i18next, { t } from "i18next";
+import { localizePath } from "astro-i18next";
 
-interface Props {
-    frontmatter: {
-        projectSystem: string;
-        projectLanguage: string;
-        projectName: string;
-        projectImg: string;
-        projectAuthor: string;
-        projectDate: string;
-        projectControllers: string[],
-        description: string,
-    }
 
-}
+const { frontmatter } = Astro.props
 
-const { frontmatter } = Astro.props;
 ---
+
 
 <Layout title={`${frontmatter.projectName} | ${frontmatter.projectLanguage} - Ninternational`} description={frontmatter.description} img={`${frontmatter.projectImg}`} lang={i18next.language}>
     <Header></Header>
     <main>
         <div class="back-button">
-            <a href="../../../projects">
+            <a href={localizePath("/projects")}>
                 <i class="fa-solid fa-arrow-left"></i>
                 {t("project_page.back")}</a>
         </div>
@@ -46,7 +36,7 @@ const { frontmatter } = Astro.props;
                 </section>
                 <section>
                     <h4>{t("project_page.date")}</h4>
-                    <p>{frontmatter.projectDate.slice(0,10)}</p>
+                    <p>{frontmatter.projectDate.toString().slice(0,15)}</p>
                 </section>
             </div>
             {frontmatter.projectControllers && <div class="project-controller">

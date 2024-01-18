@@ -1,6 +1,7 @@
 ---
 import Nav from "./Nav.astro"
 import NavMenu from "./Navmenu.astro"
+import { localizePath } from "astro-i18next";
 ---
 
 <header
@@ -9,7 +10,7 @@ import NavMenu from "./Navmenu.astro"
   :class="{ 'header__atTop' : !atTop || navmobile}"
 >
   <div>
-    <a href="/"><img src="/favicon.svg" alt="Ninternational Logo"/></a>
+    <a href={localizePath("/")}><img src="/favicon.svg" alt="Ninternational Logo"/></a>
     <Nav></Nav>
   <button
     class="burger"

@@ -1,0 +1,39 @@
+{
+    "hero": {
+        "subtitle": "Międzynarodowa grupa tłumaczeń fanowskich dla gier Nintendo."
+    },
+
+    "home_projects": {
+        "title": "Projekty wyróżnione"
+    },
+
+    "about": {
+        "title":"Co to jest Ninternational?",
+        "subtitle": "Jesteś fanatykiem tłumaczącym gry Nintendo? Ninternational jest repozytorium tłumaczeń fanowskich skupionym na grach Nintendo ze wszystkich platform. Możesz przesłać swoje tłumaczenie na naszej stronie, aby otrzymać widoczność i pomoc od dedykowanej społeczności. Jeśli to Ciebie interesuje, dołącz do naszego Discorda!"
+    },
+
+    "projects": {
+        "title": "Projekty"
+    },
+
+    "header": {
+        "projects": "Projekty",
+        "join": "Dołącz"
+    },
+
+    "footer" : {
+        "disclaimer": "Ninternational jest grupą tłumaczeń dla gier Nintendo zasilaną przez fanów. Nie jest związana z Nintendo lub którejkolwiek z jej spółek zależnych."
+    },
+
+    "404": {
+        "subtitle": "Nie znaleziono strony",
+        "homepage": "Strona główna"
+    },
+
+    "project_page": {
+        "translated": "Tłumaczenie przez:",
+        "date": "Data wydania:",
+        "controllers": "Kontrolery",
+        "back": "Wróć"
+    }
+}
