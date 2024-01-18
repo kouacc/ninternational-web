@@ -1,5 +1,5 @@
 ---
-import { changeLanguage } from "i18next";
+import i18next, { t, changeLanguage } from "i18next";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
@@ -8,7 +8,7 @@ import Projectlist from "../../components/ProjectList.astro";
 changeLanguage("de");
 ---
 
-<Layout title="Projects - Ninternational" description="An International fan-translation repository for Nintendo games" img="">
+<Layout title="Projects - Ninternational" description="An International fan-translation repository for Nintendo games" img="" lang={i18next.language}>
   <Header />
   <main>
     <Projectlist />
