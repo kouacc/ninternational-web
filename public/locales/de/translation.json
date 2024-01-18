@@ -1,6 +1,6 @@
 {
     "hero": {
-        "subtitle": "Eine internationale Fanübersetzergruppe für Nintendo-Spiele."
+        "subtitle": "Eine internationale FanÃ¼bersetzergruppe fÃ¼r Nintendo-Spiele."
     },
 
     "home_projects": {
@@ -9,7 +9,7 @@
 
     "about": {
         "title":"Was ist Ninternational?",
-        "subtitle": "Bist du ein Fan-Übersetzer und arbeitest an ein Nintendo-Spiel? Ninternational ist eine Repositorie aller Fanübersetzungen von Nintendo-Spielen auf allen Plattformen. Du kannst deine Übersetzungen auf unserer Webseite einreichen, um mehr Sichtbarkeit und Hilfe einer engagierten Community zu erhalten. Trete unserem Discord-Server bei, wenn du interessiert bist."
+        "subtitle": "Bist du ein Fan-Ãœbersetzer und arbeitest an ein Nintendo-Spiel? Ninternational ist eine Repositorie aller FanÃ¼bersetzungen von Nintendo-Spielen auf allen Plattformen. Du kannst deine Ãœbersetzungen auf unserer Webseite einreichen, um mehr Sichtbarkeit und Hilfe einer engagierten Community zu erhalten. Trete unserem Discord-Server bei, wenn du interessiert bist."
     },
 
     "projects": {
@@ -22,7 +22,7 @@
     },
 
     "footer" : {
-        "disclaimer": "Ninternational ist eine von Fans geleitete Übersetzergruppe für Nintendo-Spiele. Es ist nicht mit Nintendo oder einer seiner Tochtergesellschaften verbunden."
+        "disclaimer": "Ninternational ist eine von Fans geleitete Ãœbersetzergruppe fÃ¼r Nintendo-Spiele. Es ist nicht mit Nintendo oder einer seiner Tochtergesellschaften verbunden."
     },
 
     "404": {
@@ -31,9 +31,9 @@
     },
 
     "project_page": {
-        "translated": "Übersetzt von:",
+        "translated": "Ãœbersetzt von:",
         "date": "Erscheinungsdatum:",
         "controllers": "Controller",
-        "back": "Zurück"
+        "back": "ZurÃ¼ck"
     }
 }
