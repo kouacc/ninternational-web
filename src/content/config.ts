@@ -7,7 +7,7 @@ const projectsCollection = defineCollection({
         projectAuthor: z.string(),
         projectLanguage: z.string(),
         projectSystem: z.string(),
-        projectController: z.enum([z.string()).optional(),
+        projectController: z.enum([z.string()]).optional(),
         projectImg: z.string(),
         projectDate: z.date(),
         description: z.string(),
