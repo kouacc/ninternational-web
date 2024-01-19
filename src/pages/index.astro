@@ -29,7 +29,20 @@ changeLanguage("en");
 		color: #000;
 		font-size: 20px;
 		line-height: 1.6;
+		animation: enter 1s ease 0s 1 normal forwards;
 	}
+
+	@keyframes enter {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;

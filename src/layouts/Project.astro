@@ -55,15 +55,28 @@ const { frontmatter } = Astro.props
 <style>
     main {
 		margin: auto;
-		padding: 1rem;
+		padding: 2.5rem 1rem 1rem 1rem;
 		width: 1000px;
 		max-width: calc(100% - 2rem);
 		color: #000;
 		font-size: 20px;
 		line-height: 1.6;
         margin-top: 4rem;
+        animation: enter 1s ease 0s 1 normal forwards;
 	}
     
+    @keyframes enter {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
     h1, h2 {
 		font-family: forma-djr-display, sans-serif;
 		font-style: normal;
