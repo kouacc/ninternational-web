@@ -62,33 +62,10 @@ import { localizePath } from "astro-i18next";
 
   .burger__line {
     width: 2rem;
-    height: 0.2rem;
+    height: 0.188rem;
     background-color: #000;
     border-radius: 1rem;
     transition: all 0.5s ease;
-  }
-
-  .navmobile-open .line1 
-  .navmobile-open .line1::before,
-  .navmobile-open .line1::after {
-    transform: rotate(45deg);
-    transform-origin: 0 100%;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .navmobile-open .line2 
-  .navmobile-open .line2::before,
-  .navmobile-open .line2::after {
-    transform: scaleY(0);
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .navmobile-open .line3
-  .navmobile-open .line3::before,
-  .navmobile-open .line3::after {
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-    transition: transform 0.4s ease-in-out;
   }
 
   .nav__mobile {
