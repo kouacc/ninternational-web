@@ -28,5 +28,15 @@
         "date": "Date de sortie :",
         "controllers": "Manettes",
         "back": "Retour"
+    },
+
+    "pages_names": {
+        "home": "Accueil",
+        "projects": "Projets"
+    },
+
+    "credits_page": {
+        "site_credit": "Site web fait par kouacc",
+        "current_translation": "Traduction française faite par kouacc"
     }
 }

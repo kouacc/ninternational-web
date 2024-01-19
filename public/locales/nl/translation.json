@@ -35,5 +35,15 @@
         "date": "Uitgebracht op:",
         "controllers": "Controllers",
         "back": "Terug"
+    },
+
+    "pages_names": {
+        "home": "Startpagina",
+        "projects": "Projecten"
+    },
+
+    "credits_page": {
+        "site_credit": "Website gemaakt door kouacc",
+        "current_translation": "Nederlandse vertaling door Tibe"
     }
 }

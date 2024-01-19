@@ -9,7 +9,7 @@ import i18next, { t, changeLanguage } from "i18next";
 changeLanguage("fr");
 ---
 
-<Layout title="Ninternational" description="An International fan-translation repository for Nintendo games" img="" lang={i18next.language}>
+<Layout title={`${t("pages_names.home")} - Ninternational`} description={t("hero.subtitle")} img="" lang={i18next.language}>
 	<Header></Header>
 	<Hero></Hero>
 	<main>
@@ -29,12 +29,29 @@ changeLanguage("fr");
 		color: #000;
 		font-size: 20px;
 		line-height: 1.6;
+		animation: enter 1s ease 0s 1 normal forwards;
 	}
+
+	@keyframes enter {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+	}
+	h3 {
+		font-size: 2rem;
+		font-weight: 700;
 	}
 </style>

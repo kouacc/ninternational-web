@@ -2,10 +2,23 @@
 import { LanguageSelector } from "astro-i18next/components";
 ---
 
-<LanguageSelector showFlag={true} class="my-select-class" />
+<LanguageSelector showFlag={false} class="my-select-class" />
 
 <style>
+    .my-select-class {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px;
+    }
 
+    .my-select-class option {
+        background-color: #000;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px;
+        
+    }
 </style>
 
 

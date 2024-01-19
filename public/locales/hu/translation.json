@@ -35,5 +35,15 @@
         "date": "Megjelenés dátuma",
         "controllers": "Támogatott játékvezérlők",
         "back": "Vissza"
+    },
+
+    "pages_names": {
+        "home": "Főoldal",
+        "projects": "Projektek"
+    },
+
+    "credits_page": {
+        "site_credit": "A honlapot készítette: kouacc",
+        "current_translation": "Magyarra fordította: Szíjártó Levente Pál"
     }
 }

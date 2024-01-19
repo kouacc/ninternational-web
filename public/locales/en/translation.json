@@ -35,5 +35,15 @@
         "date": "Release Date:",
         "controllers": "Controllers",
         "back": "Back"
+    },
+
+    "pages_names": {
+        "home": "Homepage",
+        "projects": "Projects"
+    },
+
+    "credits_page": {
+        "site_credit": "Website made by kouacc",
+        "current_translation": "English version made by kouacc"
     }
 }

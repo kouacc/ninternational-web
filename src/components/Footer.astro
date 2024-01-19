@@ -1,5 +1,6 @@
 ---
 import i18next, { t } from "i18next";
+import { Trans } from "astro-i18next/components";
 ---
 
 <footer>
@@ -9,6 +10,7 @@ import i18next, { t } from "i18next";
         {t("footer.disclaimer")}
       </p>
       <span>2024 - <b>Ninternational</b></span>
+      <span>{t("credits_page.site_credit")} - {t("credits_page.current_translation")}</span>
     </div>
   </div>
   <div class="footer__right">
