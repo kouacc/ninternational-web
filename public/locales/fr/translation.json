@@ -7,7 +7,7 @@
     },
     "about": {
         "title": "Qu'est-ce que Ninternational ?",
-        "subtitle": "You are a fan-translator working on a Nintendo game? Ninternational is a fan-translation repository all about Nintendo games from all platforms. You can submit your translation on our website, to get more visibility and help from a dedicated community.<br>If you're interested, join our Discord!"
+        "subtitle": "Vous êtes un fan-traducteur travaillant sur un jeu Nintendo ? Ninternational est un répertoire de fan-traductions consacré aux jeux Nintendo, toutes plateformes confondues. Vous pouvez soumettre votre traduction sur notre site, afin d'obtenir plus de visibilité et l'aide d'une communauté dévouée. Si vous êtes intéressé, rejoignez notre Discord !"
     },
     "projects": {
         "title": "Projets"
@@ -17,7 +17,7 @@
         "join": "Rejoindre"
     },
     "footer": {
-        "disclaimer": "Ninternational is a fan-driven translation group for Nintendo games. It is not affiliated with Nintendo or any of its subsidiary."
+        "disclaimer": "Ninternational est un groupe de traduction de jeux Nintendo géré par des fans. Il n'est pas affilié à Nintendo ou à ses filiales."
     },
     "404": {
         "subtitle": "Page non trouvée",
@@ -25,7 +25,7 @@
     },
     "project_page": {
         "translated": "Traduit par :",
-        "date": "Date de sortie:",
+        "date": "Date de sortie :",
         "controllers": "Manettes",
         "back": "Retour"
     }
