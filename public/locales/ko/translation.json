@@ -1,0 +1,39 @@
+{
+    "hero": {
+        "subtitle": "닌텐도 게임들을 위한 국제적 유저번역팀."
+    },
+
+    "home_projects": {
+        "title": "주목받는 프로젝트"
+    },
+
+    "about": {
+        "title":"Ninternational 이란?",
+        "subtitle": "닌텐도 게임 팬번역에 작업중인 아마추어 번역가 이신가요? Ninternational은 모든 닌텐도 게임의 유저번역 저장소입니다. 저희 웹사이트에 번역을 제출하시고 더욱 많은 사람들의 도움과 관심을 받으세요! 관심 있으시면 디스코드에 들어오세요!"
+    },
+
+    "projects": {
+        "title": "프로젝트"
+    },
+
+    "header": {
+        "projects": "프로젝트",
+        "join": "참가"
+    },
+
+    "footer" : {
+        "disclaimer": "Ninternational은 닌텐도 게임들의 유저번역을 위해 만들어진 그룹입니다. 닌텐도 및 관련 자회사들과 관계가 없습니다."
+    },
+
+    "404": {
+        "subtitle": "페이지 없음",
+        "homepage": "홈페이지"
+    },
+
+    "project_page": {
+        "translated": "번역가:",
+        "date": "출시일:",
+        "controllers": "지원 컨트롤러",
+        "back": "뒤로 가기"
+    }
+}

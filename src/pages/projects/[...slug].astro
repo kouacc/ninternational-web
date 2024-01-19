@@ -6,7 +6,7 @@ import ProjectLayout from "../../layouts/Project.astro";
 changeLanguage("en");
 
 export async function getStaticPaths() {
-    const locales = ["en", "fr","de"];
+    const locales = ["en", "fr", "de"];
     const projectsEntries = await getCollection("projects");
     return locales.reduce((acc, locale) => {
         const paths = projectsEntries.map(entry => ({
@@ -16,8 +16,6 @@ export async function getStaticPaths() {
         }));
         return [...acc, ...paths];
     }, []);
-
-
 }
 const { entry } = Astro.props;
 const { Content } = await entry.render();
