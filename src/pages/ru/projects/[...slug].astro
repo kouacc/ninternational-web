@@ -6,16 +6,23 @@ import ProjectLayout from "../../../layouts/Project.astro";
 changeLanguage("ru");
 
 export async function getStaticPaths() {
+    const locales = ["en", "fr","de"];
     const projectsEntries = await getCollection("projects");
-    return projectsEntries.map(entry => ({
-        params: { slug: entry.slug },
-        props: { entry },
-    }));
+    return locales.reduce((acc, locale) => {
+        const paths = projectsEntries.map(entry => ({
+            params: { slug: entry.slug },
+            props: { entry },
+            locale,
+        }));
+        return [...acc, ...paths];
+    }, []);
+
+
 }
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<ProjectLayout frontmatter={entry}>
+<ProjectLayout frontmatter={entry.data}>
     <Content />
 </ProjectLayout>

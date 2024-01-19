@@ -5,7 +5,7 @@ const { projectName, projectLanguage, projectSystem, projectImg, projectLink} = 
 ---
 
 <li>
-    <a href={`${projectLink}`}><img src={`${projectImg}`} alt={`${projectName}`}></a>
+    <a href={localizePath(`${projectLink}`)}><img src={`${projectImg}`} alt={`${projectName}`}></a>
     <div class="text">
         <div class="lang-system">
             <img src={`/icons/platforms/${projectSystem}.svg`} alt={`${projectSystem}`}>
