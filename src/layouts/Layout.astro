@@ -12,6 +12,7 @@ const { title, description, img, lang } = Astro.props;
 <!doctype html>
 <html lang={lang}>
 	<head>
+		<!-- SEO -->
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
@@ -21,36 +22,31 @@ const { title, description, img, lang } = Astro.props;
 		<meta property="og:description" content={description} />
 		{img && <meta property="og:image" content={img} />}
 		<title>{title}</title>
-		<script src="https://kit.fontawesome.com/b0ac94d361.js" crossorigin="anonymous"></script>
+		<!-- Alpine.js -->
 		<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 		<script src="//unpkg.com/alpinejs" defer></script>
+		<!-- Adobe/Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 		<script>
-  			(function(d) {
-    		var config = {
-    		  kitId: 'lra6alx',
-    		  scriptTimeout: 3000,
-    		  async: true
-    		},
-    		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  		})(document);
-		</script>
+			(function(d) {
+			  var config = {
+				kitId: 'lra6alx',
+				scriptTimeout: 3000,
+				async: true
+			  },
+			  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		  </script>
+		  <!-- Font Awesome -->
+		  <script src="https://kit.fontawesome.com/b0ac94d361.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
 	html {
 		font-family: system-ui, sans-serif;
 		background: #F3F3F3;
@@ -71,10 +67,16 @@ const { title, description, img, lang } = Astro.props;
 	body {
 		margin: 0;
 	}
-
-	h1 {
-		font-family: "fot-rodin-pron", sans-serif;
-		font-weight: 600;
+	
+	p, li, a {
+		font-family: lato, sans-serif;
 		font-style: normal;
+		font-weight: 400;
+	}
+
+	h3, h4 {
+		font-family: forma-djr-display, sans-serif;
+		font-style: normal;
+		font-weight: 700;
 	}
 </style>
