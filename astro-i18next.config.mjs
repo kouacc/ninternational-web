@@ -1,5 +1,5 @@
 /** @type {import('astro-i18next').AstroI18nextConfig} */
 export default {
-  defaultLocale: "en",
-  locales: ["en", "fr", "de", "hu", "ru", "nl", "pl", "ko", "lv"],
+  defaultLocale: "en-US",
+  locales: ["en-US", "fr", "de", "hu", "ru", "nl", "pl", "ko", "lv"],
 };

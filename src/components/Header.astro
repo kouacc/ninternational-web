@@ -1,28 +1,23 @@
 ---
+import LanguageSelectMob from "./LanguageSelectMob.astro";
 import Nav from "./Nav.astro"
 import NavMenu from "./Navmenu.astro"
 import { localizePath } from "astro-i18next";
 ---
 
-<header
-  x-data="{navmobile: false, atTop: false}"
-  @scroll.window="atTop = ( window.scrollY > 150 ? false : true )"
-  :class="{ 'header__atTop' : !atTop || navmobile}"
->
+<header x-data="{navmobile: false, atTop: false}" @scroll.window="atTop = ( window.scrollY > 150 ? false : true )" :class="{ 'header__atTop' : !atTop || navmobile}">
   <div>
     <a href={localizePath("/")}><img src="/favicon.svg" alt="Ninternational Logo"/></a>
     <Nav></Nav>
-  <button
-    class="burger"
-    :class="navmobile && 'navmobile-open'"
-    @click="navmobile = ! navmobile"
-  >
-    <span class="burger__line line1"></span>
-    <span class="burger__line line2"></span>
-    <span class="burger__line line3"></span>
-  </button>
+    <div class="buttons_mobile">
+      <LanguageSelectMob></LanguageSelectMob>
+      <button class="burger" :class="navmobile && 'navmobile-open'" @click="navmobile = ! navmobile">
+        <span class="burger__line line1"></span>
+        <span class="burger__line line2"></span>
+        <span class="burger__line line3"></span>
+      </button>
+    </div>
   </div>
-  
   <NavMenu></NavMenu>
 </header>
 <style>
@@ -82,6 +77,10 @@ import { localizePath } from "astro-i18next";
     gap: 1rem;
   }
 
+  .buttons_mobile {
+    display: none;
+  }
+
   @media screen and (max-width: 630px) {
 
     .burger {
@@ -92,10 +91,20 @@ import { localizePath } from "astro-i18next";
       gap: 7px;
     }
 
+    .languageselect {
+      display: none;
+    }
+
     @media (max-width: 630px) {
       .header__atTop {
     background-color: #e9e9e9c0;
     }
+
+    .buttons_mobile {
+      display: flex;
+      align-items: center;
+  }
+
 
     
     }

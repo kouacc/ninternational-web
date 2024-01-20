@@ -8,7 +8,7 @@ const allLanguages = astroI18nextConfig.locales;
 let currentLanguage = i18next.language;
 ---
 
-<li x-data="{open: false}">
+<div x-data="{open: false}">
     <button @click="open = ! open">
         <img src={`/icons/flags/${currentLanguage}.svg`} alt={currentLanguage}>
         <i class="fa-solid fa-angle-down"></i>
@@ -22,7 +22,7 @@ let currentLanguage = i18next.language;
         }
         )}
     </ul>
-</li>
+</div>
 
 
 
@@ -43,7 +43,7 @@ let currentLanguage = i18next.language;
     }
 
     li img {
-        width: 2.188rem;
+        width: 3rem;
         height: auto;
     }
 
@@ -63,6 +63,11 @@ let currentLanguage = i18next.language;
         margin-right: 0.5rem;
     }
 
+    @media (min-width: 630px) {
+        * {
+            display: none;
+        }
+    }
 
 </style>
 
