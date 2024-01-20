@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import i18next, { t, changeLanguage } from "i18next";
+import { localizePath } from "astro-i18next";
 
 changeLanguage("fr");
 ---
@@ -11,7 +12,7 @@ changeLanguage("fr");
         <h2>{t("404.subtitle")}</h2>
         <div>
             <i class="fa-solid fa-arrow-left"></i>
-            <a href="/">{t("404.homepage")}</a>
+            <a href={localizePath("/")}>{t("404.homepage")}</a>
         </div>
     </div>
     

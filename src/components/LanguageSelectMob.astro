@@ -11,7 +11,7 @@ let currentLanguage = i18next.language;
 <div x-data="{open: false}">
     <button @click="open = ! open">
         <img src={`/icons/flags/${currentLanguage}.svg`} alt={currentLanguage}>
-        <i class="fa-solid fa-angle-down"></i>
+        <i x-bind:class="`fa-solid ${open ? 'fa-angle-up' : 'fa-angle-down'}`"></i>
     </button>
     <ul x-show="open" x-collapse>
         {allLanguages.map((lang) => {
