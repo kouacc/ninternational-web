@@ -35,5 +35,15 @@
         "date": "Дата выхода:",
         "controllers": "Управление",
         "back": "Назад"
+    },
+
+    "pages_names": {
+        "home": "Главная",
+        "projects": "Проекты"
+    },
+
+    "credits_page": {
+        "site_credit": "Сайт от: kouacc",
+        "current_translation": "Русский перевод: ilovekotov "
     }
 }
