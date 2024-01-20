@@ -35,5 +35,15 @@
         "date": "Data wydania:",
         "controllers": "Kontrolery",
         "back": "Wróć"
+    },
+
+    "pages_names": {
+        "home": "Strona główna",
+        "projects": "Projekty"
+    },
+
+    "credits_page": {
+        "site_credit": "Autor strony: kouacc",
+        "current_translation": "Autor polskiej wersji: indepth6"
     }
 }
