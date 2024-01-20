@@ -35,5 +35,15 @@
         "date": "Erscheinungsdatum:",
         "controllers": "Controller",
         "back": "Zurück"
+    },
+
+    "pages_names": {
+        "home": "Startseite",
+        "projects": "Projekte"
+    },
+
+    "credits_page": {
+        "site_credit": "Webseite erstellt von kouacc",
+        "current_translation": "Deutsche Übersetzung von CyberYoshi64"
     }
 }
