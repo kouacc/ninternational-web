@@ -2,5 +2,4 @@
 export default {
   defaultLocale: "en-US",
   locales: ["en-US", "fr", "de", "hu", "ru", "nl", "pl", "ko", "lv"],
-  load: ["server"],
 };
