@@ -8,11 +8,6 @@ import astroI18nextConfig from "../../astro-i18next.config.mjs";
 
 changeLanguage("en-US");
 
-let language = Astro.request.headers.get("Accept-Language")?.split(",")[0].split("-")[0] ?? astroI18nextConfig.defaultLocale;
-console.log(language);
-if (language !== astroI18nextConfig.defaultLocale) {
-    return Astro.redirect(`/${language}/projects`);
-}
 ---
 
 <Layout title={`${t("pages_names.projects")} - Ninternational`} description={t("hero.subtitle")} img="" lang={i18next.language}>
