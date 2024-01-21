@@ -13,10 +13,15 @@ let currentLanguage = i18next.language;
         <img src={`/icons/flags/${currentLanguage}.svg`} alt={currentLanguage}>
         <i x-bind:class="`fa-solid ${open ? 'fa-angle-up' : 'fa-angle-down'}`"></i>
     </button>
-    <ul x-show="open" x-collapse>
+    <ul x-show="open" x-collapse @click.outside="open = false">
         {allLanguages.map((lang) => {
             return (
-                <li><a href={lang === 'en-US' ? '/' : `/${lang}`}><img src={`/icons/flags/${lang}.svg`} alt={lang}>{lang.startsWith('en-') ? `English (${lang.slice(3)})` : ISO6391.getNativeName(lang)}</a></li>
+            <li>
+                <a href={lang === 'en-US' ? '/' : `/${lang}`}>
+                    <img src={`/icons/flags/${lang}.svg`} alt={lang}>
+                    {lang.startsWith('en-') ? `English (${lang.slice(3)})` : ISO6391.getNativeName(lang)}
+                </a>
+            </li>
             );
         }
         )}
@@ -32,7 +37,7 @@ let currentLanguage = i18next.language;
         list-style: none;
         padding: 0;
         margin: 0;
-        background-color: #a7a7a7;
+        background-color: #dadada;
         border-radius: 10px;
         padding: 0.5rem;
         display: flex;
