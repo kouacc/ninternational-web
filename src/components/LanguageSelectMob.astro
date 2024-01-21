@@ -3,7 +3,7 @@ import { LanguageSelector } from "astro-i18next/components";
 import astroI18nextConfig from "../../astro-i18next.config.mjs";
 import i18next from "i18next";
 const allLanguages = astroI18nextConfig.locales;
-
+import ISO6391 from "iso-639-1";
 
 let currentLanguage = i18next.language;
 ---
@@ -17,14 +17,12 @@ let currentLanguage = i18next.language;
         {allLanguages.map((lang) => {
             const flagName = lang.replace('-', '');
             return (
-                <li><a href={lang === 'en-US' ? '/' : `/${lang}`}><img src={`/icons/flags/${lang}.svg`} alt={lang}></a></li>
+            <li><a href={lang === 'en-US' ? '/' : `/${lang}`}><img src={`/icons/flags/${lang}.svg`} alt={lang}>{lang.startsWith('en-') ? `English (${lang.slice(3)})` : ISO6391.getNativeName(lang)}</a></li>
             );
         }
         )}
     </ul>
 </div>
-
-
 
 
 <style>
@@ -38,7 +36,6 @@ let currentLanguage = i18next.language;
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
         position: fixed;
         max-height: 15rem; 
         overflow-y: auto;
@@ -47,6 +44,14 @@ let currentLanguage = i18next.language;
     li img {
         width: 3rem;
         height: auto;
+    }
+
+    li a {
+        color: black;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     button {
