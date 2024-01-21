@@ -9,5 +9,5 @@ export default defineConfig({
     mdx(), 
     astroI18next()],
     output: "hybrid",
-    adapters: netlify()
+    adapter: netlify()
 });
