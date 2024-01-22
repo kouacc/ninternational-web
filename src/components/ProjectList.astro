@@ -2,13 +2,48 @@
 import ProjectCard from "./ProjectCard.astro";
 import i18next, { t } from "i18next";
 import { getCollection } from "astro:content"
+import FilterButton from "./FilterButton.astro";
 
 const allProjects = await getCollection("projects");
+
+
+const tags = allProjects.map((p) => p.data.projectLanguage).flat(); //Gets all tags from collection
+const uniqueTags = [...new Set(tags)]; //Keeps only unique tags
+
 ---
 
-
+<script>
+    function hideBlogs(evt) {
+      let selectedTag = evt.currentTarget.getAttribute("data-type");
+      let tagElement = document.getElementById("tags");
+      let tags = tagElement.dataset.tags;
+      tags = tags.split(",");
+      tags.splice(tags.indexOf(selectedTag), 1);
+  
+      tags.forEach((t) => {
+        const elementsToHide = document.getElementsByClassName(t);
+        for (let i = 0; i < elementsToHide.length; i++) {
+          elementsToHide[i].style.display = "none";
+        }
+      });
+  
+      let elementsToShow = document.getElementsByClassName(selectedTag);
+      for (let i = 0; i < elementsToShow.length; i++) {
+        elementsToShow[i].style.display = "flex";
+      }
+    }
+  
+    // Event listener for the button click
+    const input = document.querySelectorAll("#blogFilter");
+    input.forEach((e) => {
+      e.addEventListener("click", hideBlogs);
+    });
+  </script>
 
 <h2>{t("projects.title")}</h2>
+<div id="tags" data-tags={uniqueTags}>
+    {uniqueTags.map((tag) => <FilterButton {tag} />)}
+</div>
 <ul>
     {allProjects.map(post => (
         <ProjectCard
@@ -19,6 +54,8 @@ const allProjects = await getCollection("projects");
             projectSystem={post.data.projectSystem}
      />))}
 </ul>
+
+
 
 <style>
     ul {

@@ -1,10 +1,13 @@
 ---
 import { localizePath } from "astro-i18next";
 
-const { projectName, projectLanguage, projectSystem, projectImg, projectLink} = Astro.props;
+const { projectName, projectLanguage, projectSystem, projectImg, projectLink } = Astro.props;
+let tags = Astro.props.projectLanguage;
+
+
 ---
 
-<li>
+<li class=`${tags}`>
     <a href={localizePath(`${projectLink}`)}><img src={`${projectImg}`} alt={`${projectName}`}></a>
     <div class="text">
         <div class="lang-system">
