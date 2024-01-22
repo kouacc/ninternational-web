@@ -19,7 +19,7 @@
     "footer": {
         "disclaimer": "Ninternational est un groupe de traduction de jeux Nintendo géré par des fans. Il n'est pas affilié à Nintendo ou à ses filiales."
     },
-    "404": {
+    "notfound": {
         "subtitle": "Page non trouvée",
         "homepage": "Accueil"
     },

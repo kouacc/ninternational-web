@@ -2,46 +2,37 @@
     "hero": {
         "subtitle": "Een internationale fanvertalingsgemeenschap voor Nintendo-games."
     },
-
     "home_projects": {
         "title": "Uitgelichte projecten"
     },
-
     "about": {
-        "title":"Wat is Ninternational?",
+        "title": "Wat is Ninternational?",
         "subtitle": "Ben jij een Nintendo-game aan het vertalen? Ninternational is een archief voor fanvertalingen van Nintendo-games voor alle spelsystemen. Je kan je vertalingen toevoegen aan deze website om zo je project zichtbaarder te maken en hulp te krijgen van een toegewijde gemeenschap indien nodig. Geïnteresseerd? Neem dan deel aan onze Discord-server!"
     },
-
     "projects": {
         "title": "Projecten"
     },
-
     "header": {
         "projects": "Projecten",
         "join": "Neem deel"
     },
-
-    "footer" : {
+    "footer": {
         "disclaimer": "Ninternational is een fanvertalingsgemeenschap voor Nintendo-games en is niet gelieerd aan Nintendo noch aan zijn dochterbedrijven."
     },
-
-    "404": {
+    "notfound": {
         "subtitle": "Pagina niet gevonden",
         "homepage": "Startpagina"
     },
-
     "project_page": {
         "translated": "Vertaald door:",
         "date": "Uitgebracht op:",
         "controllers": "Controllers",
         "back": "Terug"
     },
-
     "pages_names": {
         "home": "Startpagina",
         "projects": "Projecten"
     },
-
     "credits_page": {
         "site_credit": "Website gemaakt door kouacc",
         "current_translation": "Nederlandse vertaling door Tibe"

@@ -2,46 +2,37 @@
     "hero": {
         "subtitle": "A Nintendo-játékok rajongói fordításainak nemzetközi csoportja."
     },
-
     "home_projects": {
         "title": "Kiemelt projektek"
     },
-
     "about": {
-        "title":"Mi az a Ninternational?",
+        "title": "Mi az a Ninternational?",
         "subtitle": "Rajongói fordításon dolgozol egy Nintendo-játékhoz? A Ninternational ezeket gyűjti össze egy helyre az összes játékhoz és konzolhoz. Ha több játékost akarsz elérni a fordításoddal és támogatást kapni a közösségünktől, állunk rendelkezésedre! Ha felkeltettük az érdeklődésedet, csatlakozz a Discord-szerverünkhöz!"
     },
-
     "projects": {
         "title": "Projektek"
     },
-
     "header": {
         "projects": "Projektek",
         "join": "Csatlakozás"
     },
-
-    "footer" : {
+    "footer": {
         "disclaimer": "A Ninternational egy rajongók által szervezett Nintendo-játékfordítói csapat. Nem állunk kapcsolatban a Nintendóval és a leányvállalataival."
     },
-
-    "404": {
+    "notfound": {
         "subtitle": "Ez az oldal nem található.",
         "homepage": "Főoldal"
     },
-
     "project_page": {
         "translated": "Fordító",
         "date": "Megjelenés dátuma",
         "controllers": "Támogatott játékvezérlők",
         "back": "Vissza"
     },
-
     "pages_names": {
         "home": "Főoldal",
         "projects": "Projektek"
     },
-
     "credits_page": {
         "site_credit": "A honlapot készítette: kouacc",
         "current_translation": "Magyarra fordította: Szíjártó Levente Pál"

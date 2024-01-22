@@ -2,46 +2,37 @@
     "hero": {
         "subtitle": "Starptautiska Nintendo spēles fan-tulkošanas grūpa."
     },
-
     "home_projects": {
         "title": "Izceltie Projekti"
     },
-
     "about": {
-        "title":"Kas ir Ninternational?",
+        "title": "Kas ir Ninternational?",
         "subtitle": "Vai jūs esāt fan-tulkotājs, kas darbo ar Nintendo spēli? Ninternational ir fan-tulkošanas krātuve, kas ir tikai par Nintendo spēlem uz visam platformam. Jūs varat submit savu tulkojumu mūsu saitē, lai iegūt lielāku redzamību un palidzību no veltītas kopienas. Ja jums ir interesānti, pievienoties mūsu Discord!"
     },
-
     "projects": {
         "title": "Projekti"
     },
-
     "header": {
         "projects": "Projekti",
         "join": "Pievienoties"
     },
-
-    "footer" : {
+    "footer": {
         "disclaimer": "Ninternational ir Nintendo spēles fan-driven tulkošanas grūpa un tas nav saistīta ar Nintendo vai kādu no tās meitasuzņēmumos."
     },
-
-    "404": {
+    "notfound": {
         "subtitle": "Nevar atrod lapu",
         "homepage": "Mājaslapa"
     },
-
     "project_page": {
         "translated": "Tulkojis:",
         "date": "Izdošanas Datums:",
         "controllers": "Kontroleri",
         "back": "Atpakaļ"
     },
-
     "pages_names": {
         "home": "Mājaslapa",
         "projects": "Projekti"
     },
-
     "credits_page": {
         "site_credit": "Saitu veidojis kouacc",
         "current_translation": "Latviešu versija veidojis maemolol"

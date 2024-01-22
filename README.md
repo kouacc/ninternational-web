@@ -91,4 +91,5 @@ You can add as many buttons as needed for your fan-translation.
 
 # Attributions
 Flags emojis by [Twemoji](https://github.com/twitter/twemoji) / CC-BY 4.0
+[astro-i18next](https://github.com/yassinedoghri/astro-i18next) by Yassine Doghri
 This website is using the [MIT Licence](LICENCE).
