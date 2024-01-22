@@ -35,5 +35,15 @@
         "date": "출시일:",
         "controllers": "지원 컨트롤러",
         "back": "뒤로 가기"
+    },
+
+    "pages_names": {
+        "home": "홈페이지",
+        "projects": "프로젝트"
+    },
+    
+    "credits_page": {
+        "site_credit": "웹사이트 제작: kouacc",
+        "current_translation": "한국어 번역: StationAlpha "
     }
 }
