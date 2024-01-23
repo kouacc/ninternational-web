@@ -38,11 +38,14 @@ const uniqueTags = [...new Set(tags)]; //Keeps only unique tags
     // Event listener for the button click
     const input = document.querySelectorAll("#blogFilter");
     input.forEach((e) => {
-      e.addEventListener("click", hideBlogs);
+      e.addEventListener("change", hideBlogs);
     });
   </script>
 
-<h2>{t("projects.title")}</h2>
+<section>
+  <h2>{t("projects.title")}</h2>
+  <button><i class="fa-solid fa-filter"></i></button>
+</section>
 <div id="tags" data-tags={uniqueTags}>
     {uniqueTags.map((tag) => <FilterButton {tag} />)}
 </div>
@@ -60,6 +63,24 @@ const uniqueTags = [...new Set(tags)]; //Keeps only unique tags
 
 
 <style>
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    section button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    section i {
+        font-size: 1.7rem;
+    }
     ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
