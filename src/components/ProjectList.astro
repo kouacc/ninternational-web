@@ -7,7 +7,9 @@ import FilterButton from "./FilterButton.astro";
 const allProjects = await getCollection("projects");
 
 
-const tags = allProjects.map((p) => p.data.projectLanguage).flat(); //Gets all tags from collection
+const tags1 = allProjects.map((p) => p.data.projectLanguage).flat();
+const tags2 = allProjects.map((p) => p.data.projectSystem).flat();
+const tags = [...tags1, ...tags2];
 const uniqueTags = [...new Set(tags)]; //Keeps only unique tags
 
 ---
