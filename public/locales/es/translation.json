@@ -1,0 +1,49 @@
+﻿{
+    "hero": {
+        "subtitle": "Un grupo internacional de traducciones no oficiales para juegos de Nintendo."
+    },
+
+    "home_projects": {
+        "title": "Proyectos destacados"
+    },
+
+    "about": {
+        "title":"¿Qué es Ninternational?",
+        "subtitle": "¿Estás traduciendo un juego de Nintendo? Ninternational es un repositorio de traducciones de juegos de Nintendo hechas por fans para todas las plataformas. Puedes enviar tu traducción a nuestra página para obtener más visibilidad y más ayuda de nuestra comunidad. Si te interesa, ¡únete a nuestro Discord!"
+    },
+
+    "projects": {
+        "title": "Proyectos"
+    },
+
+    "header": {
+        "projects": "Proyectos",
+        "join": "Unirse"
+    },
+
+    "footer" : {
+        "disclaimer": "Ninternational es un grupo de traducciones no oficiales para juegos de Nintendo creado por fans. No está afiliada con Nintendo o cualquiera de sus subsidiarias."
+    },
+
+    "notfound": {
+        "subtitle": "Esta página no existe",
+        "homepage": "Página principal"
+    },
+
+    "project_page": {
+        "translated": "Traducido por:",
+        "date": "Fecha de lanzamiento:",
+        "controllers": "Mandos",
+        "back": "Atrás"
+    },
+
+    "pages_names": {
+        "home": "Página principal",
+        "projects": "Proyectos"
+    },
+
+    "credits_page": {
+        "site_credit": "Página web creada por kouacc",
+        "current_translation": "Versión al inglés hecha por kouacc"
+    }
+}
