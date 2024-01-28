@@ -1,0 +1,26 @@
+---
+import { changeLanguage } from "i18next";
+import { getCollection } from "astro:content";
+import ProjectLayout from "../../../layouts/Project.astro";
+
+changeLanguage("es");
+
+export async function getStaticPaths() {
+    const locales = ["en"];
+    const projectsEntries = await getCollection("projects");
+    return locales.reduce((acc, locale) => {
+        const paths = projectsEntries.map(entry => ({
+            params: { slug: entry.slug },
+            props: { entry },
+            locale,
+        }));
+        return [...acc, ...paths];
+    }, []);
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<ProjectLayout frontmatter={entry.data}>
+    <Content />
+</ProjectLayout>

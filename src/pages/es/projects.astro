@@ -1,0 +1,38 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Projectlist from "../../components/ProjectList.astro";
+import astroI18nextConfig from "../../../astro-i18next.config.mjs";
+
+changeLanguage("es");
+---
+
+<Layout title={`${t("pages_names.projects")} - Ninternational`} description={t("hero.subtitle")} img="" lang={i18next.language}>
+  <Header />
+  <main>
+    <Projectlist />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 1000px;
+    max-width: calc(100% - 2rem);
+    color: #000;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 4rem;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+</style>
