@@ -82,8 +82,8 @@ const tags_sys = [...new Set(tags2)]; //Keeps only unique tags
     // Event listener for the button click
     const input = document.querySelectorAll("#blogFilter");
     input.forEach((e) => {
-      e.addEventListener("input", hideBlogs_lang);
-      e.addEventListener("input", hideBlogs_sys);
+      e.addEventListener("click", hideBlogs_lang);
+      e.addEventListener("click", hideBlogs_sys);
     });
 </script>
 

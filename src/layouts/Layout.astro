@@ -47,6 +47,7 @@ const { title, description, img, lang } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<ViewTransitions />
 	</body>
 </html>
 <style is:global>
@@ -71,3 +72,9 @@ const { title, description, img, lang } = Astro.props;
 		font-weight: 700;
 	}
 </style>
+
+<script>
+	document.addEventListener('astro:page-load', () => {
+		//refresh fontawesome
+	})
+</script>
