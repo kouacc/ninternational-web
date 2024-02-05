@@ -24,6 +24,7 @@ const { title, description, img, lang } = Astro.props;
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		{img && <meta property="og:image" content={img} />}
+		<meta name="keywords" content="ninternational, fan-translation, nintendo">
 		<title>{title}</title>
 		<!-- Alpine.js -->
 		<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
@@ -44,6 +45,7 @@ const { title, description, img, lang } = Astro.props;
 		  </script>
 		  <!-- Font Awesome -->
 		  <script src="https://kit.fontawesome.com/b0ac94d361.js" crossorigin="anonymous"></script>
+		  </script>
 	</head>
 	<body>
 		<slot />
@@ -73,8 +75,4 @@ const { title, description, img, lang } = Astro.props;
 	}
 </style>
 
-<script>
-	document.addEventListener('astro:page-load', () => {
-		//refresh fontawesome
-	})
-</script>
+
