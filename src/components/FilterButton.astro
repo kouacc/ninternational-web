@@ -4,7 +4,12 @@ import ISO6391 from 'iso-639-1';
 ---
 
 <li><button data-type={tag} name={tag} id="blogFilter">
-    
-    {tag.startsWith('en-') ? `English (${tag.slice(3)})` : tag.startsWith('pt-') ? `Português (${tag.slice(3)})` : tag.startsWith('Wii-') ? `Wii U` : ISO6391.getNativeName(tag) || tag}
+
+    {tag.startsWith('en-') ? `English (${tag.slice(3)})` :
+    tag.startsWith('pt-') ? `Português (${tag.slice(3)})` :
+    tag.startsWith('Wii-') ? `Wii U` : 
+    ISO6391.getNativeName(tag) 
+    || tag}
+
 </button>
 </li>

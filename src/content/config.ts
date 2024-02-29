@@ -10,6 +10,8 @@ const projectsCollection = defineCollection({
         projectControllers: z.string().array().optional(),
         projectImg: z.string(),
         projectDate: z.string(),
+        isBeta: z.boolean(),
+        projectVersion: z.string(),
         description: z.string(),
     })
 });

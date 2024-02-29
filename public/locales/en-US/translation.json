@@ -1,49 +1,41 @@
 {
     "hero": {
-        "subtitle": "An International fan-translation group for Nintendo games."
+        "subtitle": "A fan translation project powered by Nintendo fans from all over the world."
     },
-
     "home_projects": {
-        "title": "Highlighted Projects"
+        "title": "Featured projects"
     },
-
     "about": {
-        "title":"What is Ninternational?",
-        "subtitle": "You are a fan-translator working on a Nintendo game? Ninternational is a fan-translation repository all about Nintendo games from all platforms. You can submit your translation on our website, to get more visibility and help from a dedicated community. If you're interested, join our Discord!"
+        "title": "What is Ninternational?",
+        "subtitle": "Ninternational is a collaborative effort project whose aim is to make as many Nintendo games as possible accessible to as many people as possible on as many systems as possible. Everybody is welcome, whether you have modding knowledge that can help out, would like some help translating a specific game or just want your translations to have more exposure, simply join our Discord server!"
     },
-
     "projects": {
         "title": "Projects"
     },
-
     "header": {
         "projects": "Projects",
-        "join": "Join"
+        "join": "Discord"
     },
-
-    "footer" : {
-        "disclaimer": "Ninternational is a fan-driven translation group for Nintendo games. It is not affiliated with Nintendo or any of its subsidiary."
+    "footer": {
+        "disclaimer": "Ninternational is a fan-driven translation group. It is not affiliated with Nintendo or any of its subsidiaries. No copyright infringement is intended."
     },
-
     "notfound": {
         "subtitle": "Page not found",
-        "homepage": "Homepage"
+        "homepage": "Home"
     },
-
     "project_page": {
-        "translated": "Translated By:",
-        "date": "Release Date:",
+        "translated": "Author:",
+        "date": "Date:",
+        "version": "Version:",
         "controllers": "Controllers",
         "back": "Back"
     },
-
     "pages_names": {
-        "home": "Homepage",
+        "home": "Home",
         "projects": "Projects"
     },
-
     "credits_page": {
-        "site_credit": "Website made by kouacc",
-        "current_translation": "English version made by kouacc"
+        "site_credit": "Website by kouacc",
+        "current_translation": ""
     }
 }

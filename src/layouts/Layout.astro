@@ -1,78 +1,107 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
+
 interface Props {
-	title: string;
-	description: string;
-	img: string;
-	lang: string;
+  title: string;
+  description: string;
+  img: string;
+  lang: string;
 }
 
 const { title, description, img, lang } = Astro.props;
-
-
 ---
 
 <!doctype html>
 <html lang={lang}>
-	<head>
-		<!-- SEO -->
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		{img && <meta property="og:image" content={img} />}
-		<meta name="keywords" content="ninternational, fan-translation, nintendo">
-		<title>{title}</title>
-		<!-- Alpine.js -->
-		<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-		<script src="//unpkg.com/alpinejs" defer></script>
-		<!-- Adobe/Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;800;900&display=swap" rel="stylesheet">
-		<script>
-			(function(d) {
-			  var config = {
-				kitId: 'lra6alx',
-				scriptTimeout: 3000,
-				async: true
-			  },
-			  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-			})(document);
-		  </script>
-		  <!-- Font Awesome -->
-		  <script src="https://kit.fontawesome.com/b0ac94d361.js" crossorigin="anonymous"></script>
-		  </script>
-	</head>
-	<body>
-		<slot />
-		<ViewTransitions />
-	</body>
+  <head>
+    <ViewTransitions />
+    <!-- SEO -->
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {img && <meta property="og:image" content={img} />}
+    <meta name="keywords" content="ninternational, fan-translation, nintendo" />
+    <title>{title}</title>
+    <!-- Alpine.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Adobe/Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "lra6alx",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/b0ac94d361.js"
+      crossorigin="anonymous"></script>
+  </head>
 </html>
+<body>
+  <slot />
+</body>
+
 <style is:global>
-	html {
-		font-family: system-ui, sans-serif;
-		background: #F3F3F3;
-		background-size: 224px;
-	}
-	body {
-		margin: 0;
-	}
-	
-	p, li, a {
-		font-family: lato, sans-serif;
-		font-style: normal;
-		font-weight: 400;
-	}
+  html {
+    font-family: system-ui, sans-serif;
+    background: #f3f3f3;
+    background-size: 224px;
+  }
+  body {
+    margin: 0;
+  }
 
-	h3, h4 {
-		font-family: forma-djr-display, sans-serif;
-		font-style: normal;
-		font-weight: 700;
-	}
+  p,
+  li,
+  a {
+    font-family: lato, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  h3,
+  h4 {
+    font-family: forma-djr-display, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+  }
 </style>
-
-

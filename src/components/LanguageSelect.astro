@@ -3,80 +3,95 @@ import { LanguageSelector } from "astro-i18next/components";
 import astroI18nextConfig from "../../astro-i18next.config.mjs";
 import i18next from "i18next";
 const allLanguages = astroI18nextConfig.locales;
-import ISO6391 from 'iso-639-1';
+import ISO6391 from "iso-639-1";
 
 let currentLanguage = i18next.language;
 ---
 
 <li x-data="{open: false}">
-    <button @click="open = ! open">
-        <img src={`/icons/flags/${currentLanguage}.svg`} alt={currentLanguage}>
-        <i x-bind:class="`fa-solid ${open ? 'fa-angle-up' : 'fa-angle-down'}`"></i>
-    </button>
-    <ul x-show="open" x-collapse @click.outside="open = false">
-        {allLanguages.map((lang) => {
-            return (
-            <li>
-                <a href={lang === 'en-US' ? '/' : `/${lang}`}>
-                    <img src={`/icons/flags/${lang}.svg`} alt={lang}>
-                    {lang.startsWith('en-') ? `English (${lang.slice(3)})` : ISO6391.getNativeName(lang)}
-                </a>
-            </li>
-            );
-        }
-        )}
-    </ul>
+  <button @click="open = ! open">
+    <img src={`/icons/flags/${currentLanguage}.svg`} alt={currentLanguage} />
+    <i x-bind:class="`fa-solid ${open ? 'fa-angle-up' : 'fa-angle-down'}`"></i>
+  </button>
+  <ul x-show="open" x-collapse @click.outside="open = false">
+    {
+      allLanguages.map((lang) => {
+        return (
+          <li>
+            <a
+              href={lang === "en-US" ? "/" : `/${lang}`}
+              class="language_select"
+              data-lang={lang}
+            >
+              <img src={`/icons/flags/${lang}.svg`} alt={lang} />
+              {lang.startsWith("en-")
+                ? `English (${lang.slice(3)})`
+                : ISO6391.getNativeName(lang)}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
 </li>
 
 <script>
+  function save_lang(e) {
+    let language = e.target.getAttribute("data-lang");
+    localStorage.setItem("language", language);
+  }
 
+  const input = document.querySelectorAll(".language_select");
+  input.forEach((e) => {
+    e.addEventListener("click", save_lang);
+  });
 </script>
 
 <style>
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background-color: #dadada;
-        border-radius: 10px;
-        padding: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        max-height: 15rem;
-        overflow-y: auto;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #dadada;
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    max-height: 15rem;
+    overflow-y: auto;
+  }
 
-    ul::-webkit-scrollbar {
-        display: none; 
-    }
+  ul::-webkit-scrollbar {
+    display: none;
+  }
 
-    li a {
-        color: black;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
+  li a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-    li img {
-        width: 2.188rem;
-        height: auto;
-    }
+  li img {
+    width: 2.188rem;
+    height: auto;
+  }
 
-    button {
-        background-color: transparent;
-        border: none;
-        color: black;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
+  button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-    button img {
-        width: 2.188rem;
-        height: auto;
-        margin-right: 0.5rem;
-    }
+  button img {
+    width: 2.188rem;
+    height: auto;
+    margin-right: 0.5rem;
+  }
 </style>

@@ -1,80 +1,102 @@
 ---
 import { localizePath } from "astro-i18next";
 
-const { projectName, projectLanguage, projectSystem, projectImg, projectLink } = Astro.props;
+const {
+  projectName,
+  projectLanguage,
+  projectSystem,
+  projectImg,
+  projectLink,
+  isBeta,
+} = Astro.props;
 let tags1 = Astro.props.projectLanguage;
 let tags2 = Astro.props.projectSystem;
-
-
 ---
 
 <li class=`${tags1} ${tags2}`>
-    <a href={localizePath(`${projectLink}`)}><img src={`${projectImg}`} alt={`${projectName}`}></a>
-    <div class="text">
-        <div class="lang-system">
-            <img src={`/icons/platforms/${projectSystem}.svg`} alt={`${projectSystem}`}>
-            <img id="flag" src={`/icons/flags/${projectLanguage}.svg`} alt={`${projectLanguage}`}>
-        </div>
-        <a href={`${projectLink}`}><p>{projectName}</p></a>
+  <a href={localizePath(`${projectLink}`)}
+    ><img src={`${projectImg}`} alt={`${projectName}`} /></a
+  >
+  <div class="text">
+    <div class="icons">
+      <div class="lang-system">
+        <img
+          src={`/icons/platforms/${projectSystem}.svg`}
+          alt={`${projectSystem}`}
+        />
+        <img
+          id="flag"
+          src={`/icons/flags/${projectLanguage}.svg`}
+          alt={`${projectLanguage}`}
+        />
+      </div>
+      {isBeta && <p>Beta Project</p>}
     </div>
+    <a href={`${projectLink}`}><p>{projectName}</p></a>
+  </div>
 </li>
 
 <style>
-    li {
-        display: flex;
-        flex-direction: column;
-        animation: enter 1s ease 0s 1 normal forwards;
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @keyframes enter {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
     }
 
-    @keyframes enter {
-	0% {
-		opacity: 0;
-		transform: translateX(-50px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-    .text {
-        display: flex;
-        flex-direction: column;
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
+  }
 
-    .lang-system {
-        display: flex;
-        gap: 0.80rem;
-        align-items: center;
-    }
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .text p {
-        margin: 0;
-    }
+  .lang-system {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
 
-    a {
-        text-decoration: none;
-        color: #000;
-    }
+  .text p {
+    margin: 0;
+  }
 
-    li > a > img {
-        width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-    }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
 
-    .lang-system > img:first-child {
-        width: auto;
-        height: 1.6rem;
-    }
+  li > a > img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
 
-    .lang-system > img:last-child {
-        width: auto;
-        height: 2rem;
-    }
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    #flag {
-        filter: drop-shadow(0px 0px 0.5px black);
-    }
+  .lang-system > img:first-child {
+    width: auto;
+    height: 1.6rem;
+  }
+
+  .lang-system > img:last-child {
+    width: auto;
+    height: 2rem;
+  }
+
+  #flag {
+    filter: drop-shadow(0px 0px 0.5px black);
+  }
 </style>
